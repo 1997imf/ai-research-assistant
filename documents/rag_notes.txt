@@ -1,0 +1,7 @@
+Retrieval-Augmented Generation (RAG) is a technique that combines a search step with a language model. Instead of relying only on what the model memorized during training, a RAG system first retrieves relevant passages from a document collection and then asks the model to answer using those passages.
+
+The retrieval step can use keyword search such as BM25, or semantic search using embeddings. BM25 scores a passage higher when it contains rare query words several times. Embeddings represent text as vectors so that passages with similar meaning end up close together, even if they use different words.
+
+Chunking splits long documents into smaller passages before indexing. Typical chunk sizes range from 200 to 1000 tokens. Overlapping chunks help preserve context that would otherwise be cut at a boundary.
+
+A key benefit of RAG is that answers can cite their sources, which makes them easier to verify. A key limitation is that if retrieval misses the relevant passage, the model cannot answer correctly.
